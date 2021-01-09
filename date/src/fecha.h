@@ -1,8 +1,7 @@
 
 class Date{
     public:
-    Date(long)
-    Date_Trans(long date);
+    Date(long date);
     void is_bisiesto();
     void read();
     private:

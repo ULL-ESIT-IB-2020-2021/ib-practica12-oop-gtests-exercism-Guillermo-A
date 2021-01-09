@@ -3,20 +3,24 @@
 #include <fstream>
 #include "fecha.h"
 
-Date::Date(long date){
-    _day = int(date/1000000);
-    _month = int((date-day*1000000)/10000);
-    _year = int(date-day*1000000-month*10000);
-    day = _day;
-    month = _month;
-    year = _year
+Date::Date_Trans(long date){
+    day = int(date/1000000);
+    month = int((date-day*1000000)/10000);
+    year = int(date-day*1000000-month*10000);
+}
 
+Date::Date(int, int, int){
+    _day = day;
+    _month = month;
+    _year = year;
 }
 
 void Date::is_bisiesto(){
+    const std::string bisiesto = "Es bisiesto";
+    const std::string non_bisiesto = "No es bisiesto";
     if((year&4) == 0){
-        std::cout << "Es bisiesto" << std::endl;
+        std::cout << bisiesto << std::endl;
     }else{
-        std::cout << "No es bisiesto" << std::endl;
+        std::cout << non_bisiesto << std::endl;
     }
 }
