@@ -20,10 +20,16 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
 add_executable(runTests
-    )
-
-add_executable(date
+    test/gtest_main.cc
+    test/test_print_complex.cc
+    test/tes_add.cc
+    test/test_sub.cc
     src/complex.h
+    src/complexs.cc  
+    src/complex.h)
+
+add_executable(complex
+    src/complex.cc
     src/complexs.cc  
     src/complex.h)
 

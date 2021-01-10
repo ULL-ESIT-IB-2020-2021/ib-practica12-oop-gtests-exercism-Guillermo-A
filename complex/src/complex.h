@@ -2,14 +2,24 @@
 class Complex{
     public:
         Complex();
-        Complex(double _real, double _imag);
-        void SetReal(double _real);
-        void SetImag(double _imag);
-        double GetReal();
-        double GetImag();
+        Complex(double);
+        Complex(double , double);
+        Complex(Complex &obj);
+        Complex add(Complex z2);
+        Complex sub(Complex z2);
+        Complex mult(Complex z2);
+        Complex div(Complex z2);
+        void setReal(double _real);
+        void setImag(double _imag);
+        double getReal();
+        double getImag();
         void print_complex();
-        void add(Complex z1, Complex z2);
-        void sub(Complex z1, Complex z2);
     private:
         double real, imag;
 };
+
+void Usage(int argc, char*argv[]);
+double sum(double real1, double imag1, double real2, double imag2);
+double rest(double real1, double imag1, double real2, double imag2);
+double mult(double real1, double imag1, double real2, double imag2);
+double div(double real1, double imag1, double real2, double imag2);
