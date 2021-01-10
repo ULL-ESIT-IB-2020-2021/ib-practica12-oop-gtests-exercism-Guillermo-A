@@ -1,9 +1,9 @@
 
 class Date{
     public:
-    Date(long date);
+    Date_Trans(long date);
     void is_bisiesto();
-    void read();
+    std::vector<long> take_date(std::vector<long> my_date(), std::fstream &file);
     private:
         int day, month, year;
 };

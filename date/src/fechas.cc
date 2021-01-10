@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <fstream>
 #include "fecha.h"
+#include <vector>
 
 Date::Date_Trans(long date){
     day = int(date/1000000);
@@ -22,5 +23,25 @@ void Date::is_bisiesto(){
         std::cout << bisiesto << std::endl;
     }else{
         std::cout << non_bisiesto << std::endl;
+    }
+}
+
+std::vector<long> take_date(std::vector<long>my_date(), std::fstream &file){
+    char dates[20];
+    while(!feof(file)){
+        fgets(dates, 8, file);
+    }
+    rewind(file);
+    for(int i = 0; !feof(file); i++){
+        voiid(dates);
+        fgets(date, 8, file);
+        my_date.push_back(i) = atoi(dates);
+    }
+    return my_date();
+}
+
+void voiid(char date[]){
+    for(int i = 0; i < 20; i++){
+        date[i] = '\0';
     }
 }
